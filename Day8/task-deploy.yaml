@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   labels:
     tier: backend
-  name: nginx
+  name: nginx-deploy
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: v1
+      env: demo
   template:
     metadata:
       labels:
-        app: v1
+        env: demo
     spec:
       containers:
       - image: nginx:1.23.4
