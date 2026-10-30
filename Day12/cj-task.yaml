@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: hello
+spec:
+  schedule: "*/5 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: hello
+            image: busybox:1.28
+            imagePullPohelicy: IfNotPresent
+            command:
+            - /bin/sh
+            - -c
+            - echo 40daysofkubernetes
+          restartPolicy: OnFailure
