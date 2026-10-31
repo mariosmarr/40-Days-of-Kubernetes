@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    env: test
+  name: nginx1
+  namespace: default
+  resourceVersion: "118297"
+  uid: 1c30726e-8c7f-4b1f-8b2a-96851cfcf4f2
+spec:
+  containers:
+  - image: nginx
+    name: nginx1
+  nodeName: cka-cluster3-worker 
